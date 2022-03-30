@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Here are all the elements from the head section, as meta charset, link to css styledheet and link to external javaScript as well.-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src =  "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script2.js"></script>
+    <link rel="stylesheet" href="indexcss.css">
+    <title>Mr Burrito  ™ Order</title>
+</head>
+<body>
+
+<!-- Here are the form for the second page, with the necessary inputs and informations to be provided to JavaScript.-->
+    <main class="container1">
+        <h1 id="h12">Mr Burrito  ™ </h1>
+        <h2>Order Now</h2>
+        <form name="order" id="order" action="index.html">
+            <table>
+                <div>
+                    <tr>
+                    
+                        <td><label for="size"><strong>Which size of the Burrito would you like?</strong></label></td>
+                        <td><select onchange="superS(this.value)" class="food" name="food" id="food1">
+                        <option selected disabled value="Unselected" id="size">Select food size</option>
+                        <option value="Large">Large (&euro;7.00)</option>
+                        <option value="Extralarge">Extralarge (&euro;9.00)</option>
+                        <option value="Supersize">Supersize(&euro;17.50)</option></td>
+                        </select>
+                        <br>
+                        
+                    </tr>
+                </div> 
+
+                <div>
+                    <tr>
+                   
+                        <td><label for="quantity"><strong>How many do you want?</strrong></label></td>
+                        <td><input type="text" name="quantity" id="quantity"  placeholder="Tell me the quantity"></td>
+                    
+                    </tr>
+                </div>
+                
+                <div>
+                    <tr>
+                        <td><label for="discount"><strong>Discount Code: </strong></label></td>
+                        <td><input type="text" name="discount" id="discount" placeholder="Would you have a discount code?" size="50"><br></td>
+                    </tr>
+                </div>
+                
+                <div>
+                    <tr>
+                        <td><label for="comments" placeholder="Eg. No salt, no paper."><strong>Comments:</strong></label></td>
+                        <td><textarea type="text" name="comments" id="comments" cols="45" rows="8"></textarea>
+                        </td>
+                    </tr>
+                </div>    
+
+                <div>
+                    <tr>
+                        <!--This is the buttom to do the calculation-->
+                        <td><input id="sub" type="button" value="Calculate" onclick="calculateTotal()"></input></td>
+                        <td>Your total is: € <input id="total" type="text" name="total" placeholder="Total" readonly></td>
+                    </tr>
+                </div>
+
+             <!-- This is the button to subimit the form.-->
+            </table> 
+            <input id="sub" onclick="isNumeric(document.getElementById('quantity'), 'Amount has to be a positive(Integer) number')"  class="send" type="submit" value="Send Order"> 
+        </form>
+    </main>
+</body>
+</html>
