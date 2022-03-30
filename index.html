@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Here are all the elements from the head section, as meta charset, link to css styledheet and link to external javaScript as well.-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src =  "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="indexcss.css">
+    <title>Mr Burrito  ™ </title>
+    
+</head>
+<body>
+
+    <!--Here are the forme were I put two inputs, one for username another for password.-->
+    <main class="container">
+        <h1>Mr Burrito  ™ </h1>
+        <h2>Login</h2>
+        <form name="login">
+            <div class="input-field">
+                <input type="email" name="username" id="username" 
+                        placeholder="Enter your Email" required>
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <input type="password" name="passeword" id="password" 
+                        placeholder="Enter tour Passeword" minlength="9" maxlength="9" required >
+                <div class="underline"></div>
+            </div>
+            <input id="sub" type="submit"  onclick="validate()" value="Sing in">
+        </form>
+    </main>
+    
+    
+
+    
+</body>
+</html>
